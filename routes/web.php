@@ -33,3 +33,13 @@ Route::resource('posts','Admin\PostController');
 Route::resource('images','Admin\ImageController');
 Route::get('images/crear/{id}','Admin\ImageController@crear')->name('images.crear');
 Route::resource('publicities','Admin\PublicitiesController');
+
+
+
+Route::post('login','Auth\LoginController@login')->name('login');
+Route::post('logout','Auth\LoginController@logout')->name('logout');
+Route::get('reset','Auth\LoginController@reset')->name('reset');
+Route::get('perfil','UsersController@showProfile')->name('perfil');
+
+Route::post('resetPass','Auth\LoginController@resetPass')->name('resetPass');
+Route::get('resetPass','Auth\LoginController@login')->name('resetPass');

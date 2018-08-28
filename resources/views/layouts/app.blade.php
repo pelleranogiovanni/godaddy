@@ -69,6 +69,9 @@
 
                                  <ul class="dropdown-menu bg-info">
                                   <!-- User image -->
+                                  <li>
+                                    <a href="{{route('perfil')}}" class="btn btn-default btn-danger">Perfil</a>
+                                  </li>
                                     <li class="">
                     
                                       <p>
@@ -207,6 +210,18 @@
                         <div class="col-md-8 col-md-offset-2">
                             <div class="alert alert-success">
                                 {{session('info')}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
+             @if(session('infoError'))
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="alert alert-danger">
+                                {{session('infoError')}}
                             </div>
                         </div>
                     </div>
