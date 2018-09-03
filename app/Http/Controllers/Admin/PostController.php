@@ -51,58 +51,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store2(PostStoreRequest $request)
-    {
-
-        $post = new Post;
-       
-        if ($request->file('file')) {
-          $fotos = $request->file('file');
-        $image = $fotos[0];
-
-        $ruta = public_path().'/img/posts/';
-    
-      
-      
-        $filename  = time() . '.' . $image->getClientOriginalExtension();
-        $path = public_path('img/posts/' . $filename);
-
-        Image::make($image->getRealPath())->resize(468, 249)->save($path);
-        
-        $post->file = '/img/posts/'.$filename;
-        }else{
-            
-            $image= 'default.jpg';
-            $post->file = '/img/posts/'.$image;
-           
-        }
-        
-        $post->title = $request->input('titulo');
-        $post->user_id = 1;
-        $post->description = $request->input('descripcion');
-        
-        
-        $post->category_id = intval($request->input('category_id'));
-        $post->author = $request->input('autor');
-        $post->body = $request->input('contenido');
-        
-
-       
-
-        $post->save();
-
-        
-        $post = DB::table('posts')
-                ->latest()
-                ->first();
-
-        $ultimo = $post->id;
-        
-  
-        return redirect('/posts')->with('info','Post creado exitosamente');
    
-        
-    }
 
     public function store(PostStoreRequest $request){
 
@@ -119,9 +68,9 @@ class PostController extends Controller
           // generar un nombre aleatorio para la imagen
             $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
          
-            // $imagen->resize(600,400,function($constraint){
-            //     $constraint->aspectRatio();
-            // });
+            $imagen->resize(null,600,function($constraint){
+                 $constraint->aspectRatio();
+             });
          
           // guardar imagen
           // save( [ruta], [calidad])
@@ -161,8 +110,11 @@ class PostController extends Controller
           // generar un nombre aleatorio para la imagen
             $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
          
-            $imagen->resize(300,200);
+            //$imagen->resize(300,200);
 
+        $image->resize(null,600,function($constraint){
+        $constraint->aspectRatio();
+        });
             $image = new Imagen;
 
             $image->ruta = '/img/posts/'.$temp_name;
@@ -180,6 +132,7 @@ class PostController extends Controller
             
            return redirect('/posts')->with('info','Post creado exitosamente');
     }
+
 
     /**
      * Display the specified resource.
@@ -218,6 +171,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // $validated = $request->validated();
 
           $post = Post::find($id);
 
@@ -228,7 +182,7 @@ class PostController extends Controller
         $filename  = time() . '.' . $image->getClientOriginalExtension();
         $path = public_path('img/posts/' . $filename);
 
-        Image::make($image->getRealPath())->resize(468, 249)->save($path);
+        Image::make($image->getRealPath())->resize(800, 600)->save($path);
 
          $post->file = '/img/posts/'.$filename;
         }else{

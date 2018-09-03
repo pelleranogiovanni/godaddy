@@ -1,0 +1,13 @@
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=iacvangela@gmail.com
+MAIL_PASSWORD=dc784512
+MAIL_ENCRYPTION=ssl
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtpout.secureserver.net
+MAIL_PORT=465
+MAIL_USERNAME=franco@ar.artilock.tk
+MAIL_PASSWORD=dc784512
+MAIL_ENCRYPTION=ssl
