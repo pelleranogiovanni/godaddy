@@ -7,18 +7,18 @@
 		{!! Form::open(['action' => ['Admin\PostController@update',$post->id], 'file'=>true,'method' =>'POST','enctype' => 'multipart/form-data']) !!}
 		   <div class="form-group">
 			    {{ Form::label('title','Titulo') }}
-			    {{ Form::text('title',$post->title ,(['class' => 'form-control','placeholder'=>'Título'])) }}
+			    {{ Form::text('title',$post->title ,(['class' => 'form-control','placeholder'=>'Título', 'maxlength'=>'40'])) }}
 			</div>
 			<div class="form-group">
 					    {{ Form::label('description','Descripción') }}
-					    {{ Form::text('description',$post->description,(['class' => 'form-control',])) }}
+					    {{ Form::text('description',$post->description,(['class' => 'form-control', 'maxlength'=>'120'])) }}
 					</div>
 			<div class="form-group">
 			    {{ Form::label('body','Contenido') }}
 			    {{ Form::textarea('body',$post->body ,(['class' => 'form-control ckeditor','placeholder'=>'Contenido','id'=>'article-ckeditor'])) }}
 			</div>
 					@if($post->file)
-						<img src='{{ $post->file }}' alt="">
+						<img src='{{ $post->file }}' alt="" class="img-fluid img-responsive" width="600px" height="450PX">
 					@else
 						<img src='/img/posts/default.jpg' alt="">
 					@endif

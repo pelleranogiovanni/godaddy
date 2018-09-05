@@ -9,7 +9,7 @@
 
 		@if($post->file)
 		
-				<img src='{{ $post->file }}' alt="" class="img-fluid">
+				<img src='{{ $post->file }}' alt="" class="img-fluid img-responsive" width="600px" height="450PX">
 		
 			
 		@else

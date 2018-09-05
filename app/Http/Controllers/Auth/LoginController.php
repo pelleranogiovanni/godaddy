@@ -57,7 +57,7 @@ class LoginController extends Controller
       ];
 
       $messages = [
-        'newpassword.required'=>'Nueva contrasenia requerida',
+        'newpassword.required'=>'Nueva contraseña requerida',
       ];
 
       $validator = 
@@ -69,7 +69,7 @@ class LoginController extends Controller
             $user =new User;
             $user->where('email','=',Auth::user()->email)
                 ->update(['password'=>bcrypt($request->newpassword)]);
-            return redirect('perfil')->with('info','Cambio con exito');
+            return redirect('perfil')->with('info','Cambio con éxito');
           }else{
             return redirect('perfil')->with('infoError','Credenciales erroneas');
           }

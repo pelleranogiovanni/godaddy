@@ -65,11 +65,11 @@
         <div class="row mb-2">
         	@foreach($posts as $post)	
 	    		<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-	        		<div class="card mb-4 box-shadow"  style="height: 430px;">
+	        		<div class="card mb-4 box-shadow"  style="height: 460px;">
 			            @if($post->file)
-							<img src="{{$post->file}}" alt="" class="img-fluid">
+							<a href="{{ route('post',$post->id) }}"><img style="height: 200px; width: 400%" src="{{$post->file}}" alt="" class="img-fluid"></a>
 						@else
-							<img src="/img/posts/default.png" alt="" class="img-fluid">
+							<img style="height: 200px; width: 400%" src="/img/posts/default.png" alt="" class="img-fluid">
 						@endif
 			             <div class="card-body">
 			                <strong class="d-inline-block mb-2 text-primary"><a href="{{ route('category',$post->category_id)}}">{{$post->category->category}}</a></strong>
@@ -81,6 +81,8 @@
 			                 </h3>
 
 			                  <p class="card-text"  >{{$post->description}}</p>
+							
+			                  
 			                  <div class="d-flex justify-content-between align-items-center">
 				                    <div class="btn-group">
 				                      {{-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -90,9 +92,9 @@
 			                    
 			                  </div>
 			              </div> 
-			              <div class="card-footer">
+			              {{-- <div class="card-footer">
 									    {{$post->created_at}}
-									  </div>
+									  </div> --}}
 			        </div>
 			    </div>
  

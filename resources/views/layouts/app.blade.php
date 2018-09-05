@@ -67,11 +67,14 @@
 
                                 
 
-                                 <ul class="dropdown-menu bg-info">
+                                 <ul class="dropdown-menu">
                                   <!-- User image -->
+                                  <br>
                                   <li>
-                                    <a href="{{route('perfil')}}" class="btn btn-default btn-danger">Perfil</a>
+                                    <a href="{{route('perfil')}}" class="btn btn-outline-secondary">Editar Perfil</a>
                                   </li>
+
+                                  <hr>
                                     <li class="">
                     
                                       <p>
@@ -83,7 +86,7 @@
                     
                                       <div class="pull-right">
                                         
-                                        <a class="btn btn-sm btn-default" href="{{ route('logout') }}"
+                                        <a class="btn btn-default" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
@@ -164,11 +167,11 @@
                 
               </ul>
             </li>
-             <li>
+             {{-- <li>
               <a href="#">
                 <i class="fa fa-cogs"></i> <span>Usuario</span>
               </a>
-            </li>
+            </li> --}}
                         
           </ul>
         </section>
@@ -207,7 +210,7 @@
             @if(session('info'))
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-6">
                             <div class="alert alert-success">
                                 {{session('info')}}
                             </div>
@@ -219,7 +222,7 @@
              @if(session('infoError'))
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-6">
                             <div class="alert alert-danger">
                                 {{session('infoError')}}
                             </div>
@@ -231,7 +234,7 @@
             @if(count($errors))
                  <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
+                        <div class="col-md-6">
                             <div class="alert alert-danger">
                                 <ul>
                                     @foreach($errors->all() as $error)

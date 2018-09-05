@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Administrador de Contenidos') }}</div>
+                <div class="card-header">{{ __('Administrador de Contenidos Cooperativa Ladrilleros') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -19,7 +19,7 @@
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('e    mail') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -55,9 +55,9 @@
                                     {{ __('Iniciar Sesión') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('¿Olvidó su Contraseña?') }}
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

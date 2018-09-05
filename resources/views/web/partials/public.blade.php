@@ -8,10 +8,10 @@
           </div>
         
         
-        <div class="d-none d-sm-block">
+        <div class="d-sm-block">
             <h2>Auspiciantes</h2>
             @foreach($publi as $image)
-            <img class="card-img-top img-fluid img-thumbnail" src="{{ $image->ruta }}" alt="Card image cap" style="height: 600px; width:450px">
+            <img class="card-img-top img-fluid img-thumbnail" src="{{ $image->ruta }}" alt="Card image cap" style="height: 300px; width:450px">
               
               <div class="card-body">
                 <h5 class="card-title">{{$image->titulo}}</h5>

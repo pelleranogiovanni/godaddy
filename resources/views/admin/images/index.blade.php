@@ -3,7 +3,7 @@
 @section('content')
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offeset-2">
+			<div class="col-lg-11 col-md-11 col-sm-11">
 				<div class="card">
 					<div class="card-body">
 						<div class="card-title">
@@ -12,7 +12,7 @@
 						</div>
 						
 						<div class="card-text">
-							<table class="table">
+							<table class="table table-responsive">
 								<thead>
 									<tr>
 										<th>Id</th>

@@ -3,10 +3,10 @@
 @section('content')
 	
 	
-	<h1>Perfil del Usuario</h1>
+	<h1>Perfil de Usuario</h1>
 
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-	 Cambiar Contrase;a
+	 Cambiar Contraseña
 	</button>
 
 <!-- Modal -->
@@ -14,7 +14,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Actualizar Contrasenia</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Actualizar Contraseña</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -25,28 +25,29 @@
                 
 
                 <div class="form-group">
-                        <label for="pass">Password Actual</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <label for="pass">Clave Actual</label>
+                        <input type="password" class="form-control" name="password" placeholder="Clave actual">
                         {!! $errors->first('password','<span class="help-block">:message</span>')!!}
                 </div>
 
                 <div class="form-group">
-                        <label for="pass">Password Nueva</label>
-                        <input type="password" class="form-control" name="newpassword" placeholder="Password">
+                        <label for="pass">Clave Nueva</label>
+                        <input type="password" class="form-control" name="newpassword" placeholder="Clave nueva">
                         {!! $errors->first('password','<span class="help-block">:message</span>')!!}
                 </div>
                 <div class="form-group">
-                        <label for="pass">Re Escribir Password Nueva</label>
-                        <input type="password" class="form-control" name="repassword" placeholder="Password">
+                        <label for="pass">Escribir Nuevamente Clave Nueva</label>
+                        <input type="password" class="form-control" name="repassword" placeholder="Clave nueva">
                         {!! $errors->first('password','<span class="help-block">:message</span>')!!}
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+                <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
             </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div>
   </div>
 </div>

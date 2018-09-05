@@ -9,7 +9,7 @@
 						{!! Form::open(['action' => 'Admin\PostController@store', 'file'=>true,'method' =>'POST','enctype' => 'multipart/form-data']) !!}
 						   <div class="form-group">
 							    {{ Form::label('title','Título') }}
-							    {{ Form::text('titulo','' ,(['class' => 'form-control col-md-5','placeholder'=>'Título'])) }}
+							    {{ Form::text('titulo','' ,(['class' => 'form-control col-md-5','placeholder'=>'Título', 'maxlength'=>'40'])) }}
 							</div>
 					<br>
 					<br>
