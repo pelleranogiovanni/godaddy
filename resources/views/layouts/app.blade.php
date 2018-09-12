@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name', 'PRO CMS') }}</title>
+    <title>{{ config('CMS Coop. Ladrilleros', 'CMS Coop. Ladrilleros') }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
     <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
-
+    
+    <link rel="icon" type="image/png" href="img/icon.png">
     {{-- agregado --}}
 
 

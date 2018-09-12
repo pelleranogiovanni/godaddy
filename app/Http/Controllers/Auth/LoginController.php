@@ -29,7 +29,7 @@ class LoginController extends Controller
     }
 
     return back()
-                ->withErrors(['email'=>'Esta credenciales no coinciden'])
+                ->withErrors(['email'=>'Estas credenciales no coinciden'])
                 ->withInput(request(['email']));
     
     

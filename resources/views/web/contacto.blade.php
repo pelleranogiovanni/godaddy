@@ -48,7 +48,7 @@
 			<div class="col-md-6 border-top">
 				<div class="div mt-3">
 					<h3 class="text-uppercase text-left">Datos de Contacto</h3>
-					<p class="lead text-left">Encontranos también en.</p>
+					<p class="lead text-left">Encontranos también en</p>
 				</div>
 				
 				<div class="div border-bottom">

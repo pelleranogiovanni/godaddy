@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CMS') }}</title>
+    <title>{{ config('CMS Coop. Ladrilleros', 'CMS Coop. Ladrilleros') }}</title>
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script>
@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
     <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
+
+    <link rel="icon" type="image/png" href="img/icon.png">
 
 </head>
 <body>
